@@ -1,10 +1,9 @@
 import { SiBuymeacoffee } from "react-icons/si"
-import { ContainerCatalogue, ContentCatalogue, EachContent } from "./styles"
+import { ContainerCatalogue, ContentCatalogue, EachContent, EachBuy, ContentCart, ContainerCart } from "./styles"
 import { useContext } from "react"
 import { CatalogueContext} from "../../providers/catalogue"
 import { CartContext } from "../../providers/cart"
 import Button from "../Button"
-import { EachBuy, ContentCart, ContainerCart } from "../Cart/styles"
 import { BsCart4 } from "react-icons/bs"
 
 const ProductList = ({ type }) => {
