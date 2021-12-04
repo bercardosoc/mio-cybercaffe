@@ -9,7 +9,7 @@ import { BsCart4 } from "react-icons/bs"
 const ProductList = ({ type }) => {
     
     const { catalogue } = useContext(CatalogueContext)
-    const { cart } = useContext(CartContext)
+    const { cart, counter } = useContext(CartContext)
 
     return (
         <>
@@ -43,6 +43,7 @@ const ProductList = ({ type }) => {
                                     <img src= {item.img} alt={item.name} />
                                     <p>{item.description}</p>
                                     <span>{item.price.toFixed(2)}R$</span>
+                                    <span> {item.quantity} </span>
                                     <Button type={type} item={item} />
                                 </EachBuy>
                         ))}
