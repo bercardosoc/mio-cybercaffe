@@ -16,7 +16,6 @@ export const CartProvider = ({ children }) => {
             setCounter(counter + 1)
             item.quantity = counter
         }
-        console.log(cart)
     }
 
     const removeFromCart = (item) => {

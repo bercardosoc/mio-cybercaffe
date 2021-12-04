@@ -43,7 +43,7 @@ const ProductList = ({ type }) => {
                                     <img src= {item.img} alt={item.name} />
                                     <p>{item.description}</p>
                                     <span>{item.price.toFixed(2)}R$</span>
-                                    <span> {item.quantity} </span>
+                                    <span> Quantidade: {item.quantity} </span>
                                     <Button type={type} item={item} />
                                 </EachBuy>
                         ))}
