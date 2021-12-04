@@ -8,9 +8,15 @@ export const CartProvider = ({ children }) => {
     const [counter, setCounter] = useState(1)
 
     const addToCart = (item) => {
-        setCounter(counter + 1)
-        item.quantity = counter
-        setCart([...cart, item])
+        if (counter <= 1) {
+            setCounter(counter + 1)
+            item.quantity = counter
+            setCart([...cart, item])
+        } else {
+            setCounter(counter + 1)
+            item.quantity = counter
+        }
+        console.log(cart)
     }
 
     const removeFromCart = (item) => {

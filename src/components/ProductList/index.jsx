@@ -9,7 +9,7 @@ import { BsCart4 } from "react-icons/bs"
 const ProductList = ({ type }) => {
     
     const { catalogue } = useContext(CatalogueContext)
-    const { cart, counter } = useContext(CartContext)
+    const { cart } = useContext(CartContext)
 
     return (
         <>
