@@ -11,6 +11,12 @@ const ProductList = ({ type }) => {
     const { catalogue } = useContext(CatalogueContext)
     const { cart } = useContext(CartContext)
 
+    const frequency = (cart, item) => {
+        let count = 0
+        cart.forEach((product) => product.name === item.name && count++)
+        return count
+    }
+
     return (
         <>
             {
@@ -36,17 +42,20 @@ const ProductList = ({ type }) => {
                     <ContainerCart>
                     <h2>Carrinho de compras <BsCart4 size={25} /> </h2>
                     <ContentCart>
-                        {cart.map((item, index) => (
+                    {
+                        type === "cart" &&
+                        cart.map((item, index) => (
 
                                 <EachBuy key={index}>
                                     <h3>{item.name}</h3>
                                     <img src= {item.img} alt={item.name} />
                                     <p>{item.description}</p>
                                     <span>{item.price.toFixed(2)}R$</span>
-                                    <span> Quantidade: {item.quantity} </span>
+                                    <span> Quantidade: {frequency(cart, item)} </span>
                                     <Button type={type} item={item} />
                                 </EachBuy>
-                        ))}
+                        ))
+                        }
                     </ContentCart>
                     </ContainerCart>)
             }

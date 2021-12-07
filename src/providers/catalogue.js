@@ -15,16 +15,16 @@ export const CatalogueContext = createContext([])
 
 export const CatalogueProvider = ({ children }) => {
     const [catalogue, setCatalogue] = useState([
-        {id: 1, name: "Affogato", description: "Expresso com sorvete.", price: 10, img: affogato, quantity: 1,},
-        {id: 2, name: "Café preto", description: "Café puro.", price: 10, img: black, quantity: 1,},
-        {id: 3, name: "Capuccino", description: "Expresso com leite e chantilly.", price: 10, img: cappuccino, quantity: 1,},
-        {id: 4, name: "Dalgona", description: "Café solúvel cremoso.", price: 10, img: dalgona, quantity: 1,},
-        {id: 5, name: "Doppio", description: "Expresso duplo.", price: 10, img: doppio, quantity: 1,},
-        {id: 6, name: "Expresso", description: "Expresso simples.", price: 10, img: expresso, quantity: 1,},
-        {id: 7, name: "Galão", description: "Café português expresso com leite espumoso.", price: 10, img: galao, quantity: 1,},
-        {id: 8, name: "Irlandês", description: "Café irlandês com uísque, açúcar e creme.", price: 10, img: irish, quantity: 1,},
-        {id: 9, name: "Latte", description: "Expresso com leite", price: 10, img: latte, quantity: 1,},
-        {id: 10, name: "Mocha", description: "Expresso com chocolate e leite", price: 10, img: mocha, quantity: 1,}
+        {id: 1, name: "Affogato", description: "Expresso com sorvete.", price: 10, img: affogato, quantity: 0,},
+        {id: 2, name: "Café preto", description: "Café puro.", price: 10, img: black, quantity: 0,},
+        {id: 3, name: "Capuccino", description: "Expresso com leite e chantilly.", price: 10, img: cappuccino, quantity: 0,},
+        {id: 4, name: "Dalgona", description: "Café solúvel cremoso.", price: 10, img: dalgona, quantity: 0,},
+        {id: 5, name: "Doppio", description: "Expresso duplo.", price: 10, img: doppio, quantity: 0,},
+        {id: 6, name: "Expresso", description: "Expresso simples.", price: 10, img: expresso, quantity: 0,},
+        {id: 7, name: "Galão", description: "Café português expresso com leite espumoso.", price: 10, img: galao, quantity: 0,},
+        {id: 8, name: "Irlandês", description: "Café irlandês com uísque, açúcar e creme.", price: 10, img: irish, quantity: 0,},
+        {id: 9, name: "Latte", description: "Expresso com leite", price: 10, img: latte, quantity: 0,},
+        {id: 10, name: "Mocha", description: "Expresso com chocolate e leite", price: 10, img: mocha, quantity: 0,}
     ])
     return (
         <CatalogueContext.Provider value={{ catalogue }} >
